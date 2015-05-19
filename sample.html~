@@ -48,7 +48,7 @@
 		</div>
 		<script src='http://code.jquery.com/jquery-1.11.2.js'></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-		<script src="https://cloudboost.io/js-sdk/1.0.0.min.js"></script>
+		<script src="https://cdn.rawgit.com/CloudBoost/JavaScriptSDK/master/dist/1.0.0.js"></script>
 		<script src="sample.js"></script>
 	</body>
 </html>
