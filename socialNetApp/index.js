@@ -4,10 +4,11 @@ var obj;
 var noticeCount = 0;
 
 //Initializing CloudBoost App
-CB.CloudApp.init(appId,appKey,{
-	success: function(){
-		console.log("app is connected to cloudboost and ready to use");
-		//CloudBoost RealTime
+CB.CloudApp.init(appId,appKey);
+
+
+$(document).ready(function() {
+	//CloudBoost RealTime
 		CB.CloudObject.on('feed','created',function(cloudObj){
 			//getting realtime feeds
 			$("#feed").prepend("<div class='panel panel-default'><div class='panel-body'><div class='col-md-1 col-sm-2 col-xs-3'><img src='image/profile.png' class='img-responsive img-circle'/></div><div><strong>"+cloudObj.get('name')+"</strong><br/>"+cloudObj.get('post')+"</div></div></div>");
@@ -33,6 +34,7 @@ CB.CloudApp.init(appId,appKey,{
 		//creating an object for querying 'feed' data
 		var query = new CB.CloudQuery("feed"); 
 		query.orderByDesc('createdAt');
+		query.setLimit(70);
 		query.find({ 
 			//query will return a list of CloudObjects.
 			success: function(list){ 
@@ -45,15 +47,12 @@ CB.CloudApp.init(appId,appKey,{
 				console.log("unable to fetch data");
 			} 
 		});
-	},
-	error: function(){
-		console.log("Oops! somthing went wrong. better check your appId and key");
-	}
 });
 
 $("#noticeicon").click(function() {
 	$("$count").empty();
 });
+
 //post to feed
 $("#postForm").submit(function() {
 	obj.set("name", $("#name").val());
@@ -91,3 +90,7 @@ $("#searchForm").submit(function(){
 	});
 	return false;
 });
+
+
+
+
