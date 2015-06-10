@@ -1,9 +1,6 @@
 Simple Social App
 =================
-This is a sample app made by using cloudboost database service. 
-
-
-
+This is a sample app build on cloudboost database service. 
 
 ###Features
 + Data-Storage
