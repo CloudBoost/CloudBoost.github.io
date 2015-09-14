@@ -1,5 +1,5 @@
-var appId="sampleapp";
-var appKey="tRtzAk6/M8onYrZEc2RTqg==";
+var appId="sampleapp1";
+var appKey="sTZdOFqStLtPjOzosIc7gg==";
 var obj;
 var noticeCount = 0;
 
