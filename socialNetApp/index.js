@@ -55,6 +55,7 @@ $("#noticeicon").click(function() {
 
 //post to feed
 $("#postForm").submit(function() {
+	obj = new CB.CloudObject("feed");
 	obj.set("name", $("#name").val());
 	obj.set("post",$("#text").val());
 	//saving post
