@@ -57,7 +57,8 @@ $("#noticeicon").click(function() {
 $("#postForm").submit(function() {
 	obj = new CB.CloudObject("feed");
 	obj.set("name", $("#name").val());
-	obj.set("post",$("#text").val());
+	var post = $("#text").val();
+	obj.set("post",post.replace(/<\/?[^>]+(>|$)/g, ""));
 	//saving post
 	obj.save({
 		success: function(obj) {
