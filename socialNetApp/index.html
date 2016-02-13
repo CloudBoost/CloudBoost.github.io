@@ -6,12 +6,12 @@
 		<title>Sample App</title>
 	</head>
 	<body >
-		<nav class="navbar navbar-inverse">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container">
 				<form class="navbar-form navbar-left form-inline" role="search" id="searchForm">
 					<div class="form-group">
 						<div class="input-group" style="display:table;">
-							<input type="text" class="form-control" id="search" placeholder="Search Anything">
+							<input type="text" class="form-control" id="search" placeholder="Search Anything" required>
 							<span class="input-group-btn">
 								<button class="btn btn-warning bt-sm" type="submit"><span class="glyphicon glyphicon-search"></span></button>
 							</span>
@@ -33,10 +33,10 @@
 			<div id="postbox">
 				<form class="form-inline" id="postForm">
 					<div class="form-group">
-						<input type="text" class="form-control" name="name" id="name" value="" placeholder="Your Name"></input>
+						<input type="text" class="form-control" name="name" id="name" value="" placeholder="Your Name" required>
 					</div>
 					<div class="form-group" >
-						<input type="text" class="form-control" name="text" id="text" value="" placeholder="Post Anything"></input>
+						<input type="text" class="form-control" name="text" id="text" value="" placeholder="Post Anything" required>
 					</div>
 					<button class="btn btn-primary" type="submit">Post</button>
 				</form>
